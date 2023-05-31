@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class Registro extends AppCompatActivity {
@@ -35,8 +36,25 @@ public class Registro extends AppCompatActivity {
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String nombre = findViewById(R.id.txtNombre).toString();
+                String apellido = findViewById(R.id.txtApellido).toString();
+                String Genero = findViewById(R.id.idspinnerGeneros).toString();
+
                 Intent intent = new Intent(Registro.this, Login.class);
                 startActivity(intent);
+                dbInsertaLogin classlogin = new dbInsertaLogin(Registro.this);
+                long id = classlogin.insertaLogin(1,"juan","PEREZ","Masculino");
+
+                if (id> 0 )
+                {
+                    Toast.makeText(Registro.this, "registro ingresado", Toast.LENGTH_SHORT).show();
+
+                }
+                else
+                {
+                    Toast.makeText(Registro.this, "registro no ingresado", Toast.LENGTH_SHORT).show();
+                }
+
 
             }
 

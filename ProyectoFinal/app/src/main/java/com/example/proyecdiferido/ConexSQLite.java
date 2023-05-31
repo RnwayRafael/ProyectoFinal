@@ -6,14 +6,21 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
 
 public class ConexSQLite extends SQLiteOpenHelper {
+    private static  final  String DatabaseNombre = "BDProyec";
+    public static  final String TableLogin ="TableLogin";
     final String TB_LOGIN= "CREATE TABLE LOGIN( ID INTEGER NOT NULL,NOMBRE TEXT NOT NULL, APELLIDO TEXT NOT NULL, GENERO TEXT NOT NULL,PRIMARY KEY(ID ) )";
-    public ConexSQLite(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+    public ConexSQLite(@Nullable Context context) {
+        super(context, DatabaseNombre, null, 1);
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL(TB_LOGIN);
+    public void onCreate(SQLiteDatabase SQLiteDatabase) {
+        SQLiteDatabase.execSQL("create Table" + TableLogin + "(" +
+                " ID INTEGER ,"+
+                "nombre text, " +
+                "genero text )"
+         );
+
     }
 
     @Override

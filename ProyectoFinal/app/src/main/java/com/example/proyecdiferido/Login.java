@@ -28,7 +28,7 @@ public class Login extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     if (user.getText().toString().equals("user") && password.getText().toString().equals("123")) {
-
+                        //new ConexSQLite(Contex, contex,Prueba, 1);
                         //Intent intent = new Intent(Login.this, Registro.class);
                         //startActivity(intent);
                         Toast.makeText(Login.this, "OK!!!", Toast.LENGTH_SHORT).show();
