@@ -36,24 +36,43 @@ public class Registro extends AppCompatActivity {
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nombre = findViewById(R.id.txtNombre).toString();
-                String apellido = findViewById(R.id.txtApellido).toString();
-                String Genero = findViewById(R.id.idspinnerGeneros).toString();
+                TextView nombre = findViewById(R.id.txtNombre);
+                TextView apellido = findViewById(R.id.txtApellido);
+                Spinner spinner = findViewById(R.id.idspinnerGeneros);
+                String itemSeleccionado = spinner.getSelectedItem().toString();
+
+
+                 String nombreSet =nombre.toString();
+
+
+            if(nombreSet == "Nombre")
+            {
+                Toast.makeText(Registro.this, "ingrese nombre: " , Toast.LENGTH_SHORT).show();
+
+            }
+            else {
+                Toast.makeText(Registro.this, "ingrese nombre: " , Toast.LENGTH_SHORT).show();
+            }
+        /*    else {
 
                 Intent intent = new Intent(Registro.this, Login.class);
                 startActivity(intent);
                 dbInsertaLogin classlogin = new dbInsertaLogin(Registro.this);
-                long id = classlogin.insertaLogin(1,"juan","PEREZ","Masculino");
+                long id = classlogin.insertaLogin(1,nombre.getText().toString(),apellido.toString(),itemSeleccionado);
 
                 if (id> 0 )
                 {
-                    Toast.makeText(Registro.this, "registro ingresado", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(Registro.this, "registro ingresado", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Registro.this, "Elemento seleccionado: " + itemSeleccionado, Toast.LENGTH_SHORT).show();
 
                 }
                 else
                 {
                     Toast.makeText(Registro.this, "registro no ingresado", Toast.LENGTH_SHORT).show();
                 }
+
+            }
+                */
 
 
             }

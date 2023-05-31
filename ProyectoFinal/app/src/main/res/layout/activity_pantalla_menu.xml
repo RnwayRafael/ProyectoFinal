@@ -17,11 +17,11 @@
 
     <ImageButton
         android:id="@+id/imghotel"
-        android:layout_width="237dp"
-        android:layout_height="210dp"
+        android:layout_width="236dp"
+        android:layout_height="218dp"
         app:srcCompat="@drawable/iconohotel"
         tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="12dp" />
+        tools:layout_editor_absoluteY="7dp" />
 
     <ImageButton
         android:id="@+id/imgplaya"

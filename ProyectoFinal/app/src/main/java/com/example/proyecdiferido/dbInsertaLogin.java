@@ -4,12 +4,10 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.Nullable;
 
-import org.w3c.dom.Text;
-
 //import androix.annottation.Nullable;
 
 
-public class dbInsertaLogin extends   ConexSQLite {
+public class dbInsertaLogin extends DatabaseHelper {
 
     Context context;
 
@@ -21,10 +19,8 @@ public class dbInsertaLogin extends   ConexSQLite {
     public long insertaLogin(Integer ID, String Nombre, String Apellido, String Genero) {
         long id= 0 ;
         try {
-            ConexSQLite conexion = new ConexSQLite(context);
+            DatabaseHelper conexion = new DatabaseHelper(context);
             SQLiteDatabase db = conexion.getWritableDatabase();
-
-
 
             ContentValues values = new ContentValues();
             values.put("id", ID);
