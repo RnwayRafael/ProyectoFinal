@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CabanasMenu">
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="172dp"
+        android:src="@drawable/layoutcabanas" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="360dp"
+        android:layout_height="122dp"
+        app:srcCompat="@drawable/jaraguah"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="220dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="341dp"
+        android:layout_height="121dp"
+        app:srcCompat="@drawable/teranostra"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="386dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="350dp"
+        android:layout_height="119dp"
+        app:srcCompat="@drawable/villaverde"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="552dp" />
+
+</android.support.constraint.ConstraintLayout>
