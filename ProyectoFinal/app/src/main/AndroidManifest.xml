@@ -12,6 +12,18 @@
         android:theme="@style/Theme.ProyecDiferido"
         tools:targetApi="31">
         <activity
+            android:name=".CabanasMenu"
+            android:exported="false" />
+        <activity
+            android:name=".PlayaMenu"
+            android:exported="false" />
+        <activity
+            android:name=".HotelMenu"
+            android:exported="false" />
+        <activity
+            android:name=".PantallaMenu"
+            android:exported="false" />
+        <activity
             android:name=".Productos"
             android:exported="false" />
         <activity
