@@ -106,7 +106,7 @@
         android:id="@+id/textView3"
         android:layout_width="73dp"
         android:layout_height="24dp"
-        android:text="NOMBRE"
+        android:text="USUARIO"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -117,9 +117,9 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="81dp"
+        android:layout_width="106dp"
         android:layout_height="30dp"
-        android:text="APELLIDO"
+        android:text="CONTRASEÑA"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

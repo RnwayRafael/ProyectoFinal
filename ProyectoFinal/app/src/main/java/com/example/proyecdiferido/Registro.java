@@ -9,13 +9,14 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.text.TextUtils;
 
 public class Registro extends AppCompatActivity {
 
     TextView estado;
     Spinner comboGeneros;
     Button btnGuardar;
+    Button btnCrear;
 
 
     @Override
@@ -32,6 +33,16 @@ public class Registro extends AppCompatActivity {
 
         comboGeneros.setAdapter(adapter);
 
+        Button btnSalir = findViewById(R.id.btn_Crear);
+        btnSalir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Registro.this, Login.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
 
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,18 +53,22 @@ public class Registro extends AppCompatActivity {
                 String itemSeleccionado = spinner.getSelectedItem().toString();
 
 
-                 String nombreSet =nombre.toString();
+                 String nombreSet =nombre.getText().toString();
+                 String ApellidoSet = apellido.getText().toString();
 
 
-            if(nombreSet == "Nombre")
+          //      Toast.makeText(Registro.this, "ingrese nombre: "+ nombreSet , Toast.LENGTH_SHORT).show();
+            if(TextUtils.isEmpty(nombreSet))
             {
                 Toast.makeText(Registro.this, "ingrese nombre: " , Toast.LENGTH_SHORT).show();
 
             }
-            else {
-                Toast.makeText(Registro.this, "ingrese nombre: " , Toast.LENGTH_SHORT).show();
+            else if (TextUtils.isEmpty(ApellidoSet)) {
+                Toast.makeText(Registro.this, "ingrese apellido: " , Toast.LENGTH_SHORT).show();
+
             }
-        /*    else {
+           else
+            {
 
                 Intent intent = new Intent(Registro.this, Login.class);
                 startActivity(intent);
@@ -62,18 +77,17 @@ public class Registro extends AppCompatActivity {
 
                 if (id> 0 )
                 {
-                    //Toast.makeText(Registro.this, "registro ingresado", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(Registro.this, "Elemento seleccionado: " + itemSeleccionado, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Registro.this, "registro ingresado", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(Registro.this, "Elemento seleccionado: " + itemSeleccionado, Toast.LENGTH_SHORT).show();
 
                 }
+
                 else
                 {
                     Toast.makeText(Registro.this, "registro no ingresado", Toast.LENGTH_SHORT).show();
                 }
 
             }
-                */
-
 
             }
 

@@ -18,24 +18,36 @@
         android:id="@+id/imageButton7"
         android:layout_width="360dp"
         android:layout_height="122dp"
-        app:srcCompat="@drawable/jaraguah"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="220dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.366"
+        app:srcCompat="@drawable/jaraguah" />
 
     <ImageButton
         android:id="@+id/imageButton10"
         android:layout_width="341dp"
         android:layout_height="121dp"
-        app:srcCompat="@drawable/teranostra"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="386dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.622"
+        app:srcCompat="@drawable/teranostra" />
 
     <ImageButton
         android:id="@+id/imageButton12"
         android:layout_width="350dp"
         android:layout_height="119dp"
-        app:srcCompat="@drawable/villaverde"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="552dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.901"
+        app:srcCompat="@drawable/villaverde" />
 
 </android.support.constraint.ConstraintLayout>

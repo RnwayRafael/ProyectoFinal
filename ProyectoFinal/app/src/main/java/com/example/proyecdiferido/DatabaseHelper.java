@@ -4,6 +4,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
+import com.example.proyecdiferido.PantallaMenu;
+
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static  final  String DatabaseNombre = "BDProyec";
